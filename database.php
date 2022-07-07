@@ -1,9 +1,9 @@
 <?php
 
-$dbServername = "localhost:3307";
-$dbUsername = "crys28";
-$dbPassword = "280220";
-$dbName = "library";
+$dbServername = "remotemysql.com";
+$dbUsername = "rL46RIpvTF";
+$dbPassword = "XBSjef7uz3";
+$dbName = "rL46RIpvTF";
 
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
