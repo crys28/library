@@ -16,7 +16,7 @@ $sql = "INSERT INTO `comenzi` (`Nume`,`Prenume`,`Oras`,`CodPostal`,`Email`,`Adre
 ('$nume','$prenume','$oras','$postal','$email','$adresa',current_date(),'$idCarte_Titlu');";
 mysqli_query($conn, $sql);
 
-header("Location: ../library/books.php?order=success")
+header("Location: ../crys-library.herokuapp.com/books.php?order=success")
 
 
 
