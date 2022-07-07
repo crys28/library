@@ -69,6 +69,7 @@
 													CodPostal,
 													Email,
 													Adresa,
+													Data_Comanda,
 													a.Titlu AS Titlu
 													FROM comenzi AS b JOIN carte AS a
 													ON b.idCarte_Titlu = a.idCarte;";
