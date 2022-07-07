@@ -56,6 +56,7 @@
 						<th>Email</th>
 						<th>Adresa</th>
 						<th>Titlu</th>
+						<th>DataComanda</th>
 					</tr>
 					<!-- <p>idComanda | Nume | Prenume | Oras | CodPostal | Email | Adresa | Titlu</p> -->
 
@@ -81,7 +82,8 @@
 										            echo '<td>' . $row['CodPostal'] . '</td>';
 										            echo '<td>' . $row['Email'] . '</td>';
 										            echo '<td>' . $row['Adresa']. '</td>';
-										            echo '<td>' . $row['Titlu'] . '</td>' . '</tr>';
+										            echo '<td>' . $row['Titlu'] . '</td>';
+										            echo '<td>' . $row['Data_Comanda'] . '</td>' . '</tr>';
 										        }
 										    
 										?>
