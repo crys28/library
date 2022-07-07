@@ -193,11 +193,11 @@ margin-top: 8%;
 }
 
 
-@media only screen and (max-width: 1200px) {
+/*@media only screen and (max-width: 1200px) {
   .jumbotron_ed2{
   	height: 100vh;
   }
-}
+}*/
 
 
 .thumbnail{

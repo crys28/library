@@ -43,7 +43,7 @@
 
 	<div class="conainter welcome">
 		
-		<div class="jumbotron_ed2">
+		<div class="jumbotron_ed3">
 			<p class="banner">Lista comenzilor !</p>
 			<div class="orders">
 				<table>
