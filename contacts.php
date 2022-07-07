@@ -1,0 +1,71 @@
+<?php
+
+    include_once 'database.php';
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crys's Library</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top nav_hover">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.php" class="navbar-brand"><i class="fas fa-skull-crossbones"></i> Crys's Library</a>
+        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="books.php">Books</a></li>
+                <li><a href="orders.php">My Orders</a></li>
+                <li class="active"><a href="contacts.php">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+	</nav>
+
+	<div class="conainter welcome">
+		
+		<div class="jumbotron_ed3">
+			<p class="banner">Lista de contacte a editurilor !</p>
+			<div class="editura">
+				
+				<table>
+
+										<?php
+										    $sql = "SELECT * FROM editura;";
+
+										    $result = mysqli_query($conn, $sql);
+										        while ($row = mysqli_fetch_assoc($result)) {									           
+										            echo '<td>' . $row['Nume'] . '</td>';
+										            echo '<td>' . $row['Telefon'] . '</td>' . '</tr>';
+										        }
+										    
+										?>
+				</table>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
