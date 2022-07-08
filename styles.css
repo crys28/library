@@ -301,6 +301,7 @@ margin-top: 8%;
 	padding: 2px;
 	display: grid;
 	overflow: scroll;
+	overflow-x: hidden;
 }
 
 
