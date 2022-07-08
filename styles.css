@@ -77,9 +77,10 @@ h1{
 
 .carousel-inner{
 transition-duration: 1s;
-margin-left: 20%;
 margin-top: 8%;
 }
+
+
 
 @media only screen and (max-width: 1200px) {
  .jumbotron_ed div:nth-of-type(2){

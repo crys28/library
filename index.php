@@ -58,7 +58,7 @@
             
            <div class="container">
   
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 90%;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -69,15 +69,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="img/slide1.webp" alt="Los Angeles" style="width:60%;">
+        <img src="img/slide1.webp" alt="Los Angeles" style="width:60%;margin-left: 25%">
       </div>
 
       <div class="item">
-        <img src="img/slide2.jpg" alt="Chicago" style="width:60%;">
+        <img src="img/slide2.jpg" alt="Chicago" style="width:60%;margin-left: 25%">
       </div>
     
       <div class="item">
-        <img src="img/slide3.jpg" alt="New york" style="width:60%;">
+        <img src="img/slide3.jpg" alt="New york" style="width:60%;margin-left: 25%">
       </div>
     </div>
 
