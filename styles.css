@@ -219,7 +219,7 @@ margin-top: 8%;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
@@ -254,6 +254,7 @@ margin-top: 8%;
 @media only screen and (max-width: 1200px) {
   .overlay{
   	margin-top: 25%;
+  	height: 100vh;
   }
 }
 
@@ -264,21 +265,41 @@ margin-top: 8%;
 }
 
 
+.modal-content{
+	width: 75%;
+}
+
+.pop_up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+}
+
+#pop_up{
+    width: 50%;
+    height: auto;
+    border: 2px gold;
+    text-align: center;
+    padding: 1%;
+    color: white;
+    background-color: green;
+    border-radius: 10vw;
+}
 
 /********ORDERS**********/
 
 .orders{
-	width: 70%;
+	width: 80%;
 	text-align: center;
-	height: 25vw;
 	border: 20px solid white;
-	background-color: white;
+	background-color: #F0E68C;
 	border-image: url(img/wood.jpg) 30 stretch;
-	/*word-spacing: 25px;*/
 	font-size: 1.6rem;
 	padding: 2px;
 	display: grid;
-	/*grid-row-start: all;*/
 	overflow: scroll;
 }
 
@@ -339,7 +360,7 @@ td{
 	width: 50%;
 	text-align: center;
 	border: 20px solid white;
-	background-color: white;
+	background-color: #F0E68C;
 	border-image: url(img/wood.jpg) 30 stretch;
 	/*word-spacing: 25px;*/
 	font-size: 1.6rem;
@@ -365,5 +386,28 @@ td{
   .jumbotron_ed3 p{
   	font-size: 5.5vw;
   	width: 85%;
+  }
+}
+
+
+
+/*******VALIDATION****/
+
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    /*display: block;*/
+}
+
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  label.error{
+  	display: block;
   }
 }

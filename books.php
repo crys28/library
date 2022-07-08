@@ -58,16 +58,22 @@
         </div>
         <div class="modal-body">
           	
-          	<form action="book_order.php" method="POST">
+          	<form name="order" action="book_order.php" method="POST">
           		<input type="text" name="nume" placeholder="Nume"><br>
-          		<input type="text" name="prenume" placeholder="Prenume"><br>
-          		<input type="text" name="oras" placeholder="Oras"><br>
-          		<input type="text" name="postal" placeholder="Cod Postal"><br>
-          		<input type="text" name="email" placeholder="Email"><br>
-          		<input type="text" name="adresa" placeholder="Adresa"><br>
+          		<input type="text" name="prenume" placeholder="Prenume" required><br>
+          		<input type="text" name="oras" placeholder="Oras" required><br>
+          		<input type="text" name="postal" placeholder="Cod Postal" required><br>
+          		<input type="email" name="email" placeholder="Email" required><br>
+          		<input type="text" name="adresa" placeholder="Adresa" required><br>
           		<input  type="text" name="idCarte_Titlu" id="id" class="id"><br>
-          		<button type="submit" name="submit">Place the Order !</button>
+          		<button id="send" type="submit" name="submit">Place the Order !</button>
           	</form>
+ 
+ <div id="pop_up" class="pop_up" style="opacity: 0">
+                     <h2>Comanda plasata cu succes !</h2>
+            </div>
+
+
 
 
         </div>
@@ -894,6 +900,80 @@ ON b.idAutor = a.idAutor WHERE idCarte = 20;";
 	</div>
 
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+
+<script>
+    $(function () {
+        $("form[name='order']").validate({
+            
+            rules: {
+                nume: "required",
+                prenume: "required",
+                oras: "required",
+                postal: "required",
+                email: "required",
+                adresa: "required",
+                nume: {
+                    required: true,
+                    number: false
+                },
+                prenume: {
+                    required: true,
+                    number: false
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                postal: {
+                    required: true,
+                    number: true
+                },
+                oras: {
+                    required: true,
+                    number: false
+                }
+            },
+            
+            messages: {
+                nume: {
+                    required: "Va rog introduceti un nume"
+            },
+                prenume: {
+                    required: "Va rog introduceti un prenume"
+            },
+                email: {
+                    required: "Va rog introduceti o adresa de email",
+                    email: "Introduceti o adresa de mail valida!('@')"              
+            },
+            postal: {
+                    required: "Va rog introduceti codul postal",
+                    number: "Codul postal poate contine doar cifre"              
+            },
+            oras: {
+                    required: "Va rog introduceti orasul unde va aflati"             
+            },
+            adresa: {
+            		required: "Va rog introduceti adresa"
+            }
+        },
+            submitHandler: function(form) {
+    		  form.submit();
+    }
+        });
+    }); 
+</script>
+
+<script>
+            $("#send").click(function() {
+     if ($("form[name='order']").valid() == true) {
+     $("#pop_up").css("opacity", "1");
+    }
+});
+       </script>
 
 <script type="text/javascript" src="btn.js"></script>
 </body>
