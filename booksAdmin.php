@@ -59,7 +59,7 @@
         </div>
         <div class="modal-body">
           	
-          	<form name="order" action="book_order.php" method="POST">
+          	<form name="order" action="book_orderAdmin.php" method="POST">
           		<input type="text" name="nume" placeholder="Nume"><br>
           		<input type="text" name="prenume" placeholder="Prenume" required><br>
           		<input type="text" name="oras" placeholder="Oras" required><br>
