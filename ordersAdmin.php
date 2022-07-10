@@ -33,9 +33,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="books.php">Books</a></li>
-                <!-- <li><a href="orders.php">My Orders</a></li> -->
-                <li class="active"><a href="contacts.php">Contact us</a></li>
+                <li><a href="booksAdmin.php">Books</a></li>
+                <li class="active"><a href="ordersAdmin.php">My Orders</a></li>
+                <li><a href="contactsAdmin.php">Contact us</a></li>
                  <li><a class="logout" href="login.php"><img src="img/logout.png"></a></li>
             </ul>
         </div>
@@ -45,21 +45,51 @@
 	<div class="conainter welcome">
 		
 		<div class="jumbotron_ed3">
-			<p class="banner">Lista de contacte a editurilor !</p>
-			<div class="editura">
-				
+			<p class="banner">Lista comenzilor !</p>
+			<div class="orders">
 				<table>
+					<tr>
+						<th>idComanda</th>
+						<th>Nume</th>
+						<th>Prenume</th>
+						<th>Oras</th>
+						<th>CodPostal</th>
+						<th>Email</th>
+						<th>Adresa</th>
+						<th>Titlu</th>
+						<th>DataComanda</th>
+					</tr>
+					<!-- <p>idComanda | Nume | Prenume | Oras | CodPostal | Email | Adresa | Titlu</p> -->
 
 										<?php
-										    $sql = "SELECT * FROM editura;";
+										    $sql = "SELECT 
+													idComenzi,
+													Nume,
+													Prenume,
+													Oras,
+													CodPostal,
+													Email,
+													Adresa,
+													Data_Comanda,
+													a.Titlu AS Titlu
+													FROM comenzi AS b JOIN carte AS a
+													ON b.idCarte_Titlu = a.idCarte;";
 
 										    $result = mysqli_query($conn, $sql);
-										        while ($row = mysqli_fetch_assoc($result)) {									           
+										        while ($row = mysqli_fetch_assoc($result)) {
+										            echo '<tr>' . '<td>' . $row['idComenzi'] . '</td>';
 										            echo '<td>' . $row['Nume'] . '</td>';
-										            echo '<td>' . $row['Telefon'] . '</td>' . '</tr>';
+										            echo '<td>' . $row['Prenume'] . '</td>';
+										            echo '<td>' . $row['Oras'];
+										            echo '<td>' . $row['CodPostal'] . '</td>';
+										            echo '<td>' . $row['Email'] . '</td>';
+										            echo '<td>' . $row['Adresa']. '</td>';
+										            echo '<td>' . $row['Titlu'] . '</td>';
+										            echo '<td>' . $row['Data_Comanda'] . '</td>' . '</tr>';
 										        }
 										    
 										?>
+
 				</table>
 			</div>
 		</div>

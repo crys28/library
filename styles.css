@@ -37,6 +37,98 @@ body::-webkit-scrollbar-thumb {
 	font-size: 2rem;
 }
 
+/*******LOGIN******/
+
+.login{
+	width: 25%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid white;
+	border-radius: 75vw;
+	font-size: 3vw;
+	text-align: center;
+	text-decoration: none;
+	
+}
+
+@media only screen and (max-width: 1200px) {
+ .login{
+  	width: 70%;
+  	font-size: 10vw;
+  }
+}
+
+.login a{
+	color: white;
+}
+
+.user{
+	
+	width: 100%;
+	border-top-right-radius: 75vw;
+	border-top-left-radius: 75vw;
+	transition-duration: 1s;
+	border-bottom: 1px solid white;
+}
+
+.admin{
+	width: 100%;
+	border-bottom-right-radius: 75vw;
+	border-bottom-left-radius: 75vw;
+	transition-duration: 1s;
+}
+
+.user:hover{
+background-color: white;
+color: green;
+}
+.user:hover a{
+color: green;
+}
+
+.admin:hover{
+background-color: white;
+}
+.admin:hover a{
+color: red;
+}
+
+
+.userNone{
+	color: blue;
+}
+.logout img{
+	transition-duration: 0.5s;
+}
+
+.logout:hover img{
+	background-color: white;
+}
+
+.pop_up2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+   	font-size: 0.5vw;
+}
+
+#pop_up2{
+    width: 50%;
+    height: auto;
+    border: 2px gold;
+    text-align: center;
+    padding: 1%;
+    color: white;
+    background-color: red;
+    border-radius: 10vw;
+}
+
+
 /***NAVBAR***/
 .nav_hover:hover{
 	border-bottom: 1px solid white;

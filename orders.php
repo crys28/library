@@ -34,8 +34,9 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="books.php">Books</a></li>
-                <li class="active"><a href="orders.php">My Orders</a></li>
+                <!-- <li class="active"><a href="orders.php">My Orders</a></li> -->
                 <li><a href="contacts.php">Contact us</a></li>
+                 <li><a class="logout" href="login.php"><img src="img/logout.png"></a></li>
             </ul>
         </div>
     </div>
