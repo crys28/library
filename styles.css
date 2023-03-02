@@ -1,0 +1,904 @@
+:root {
+  --yellow: #f0e68c;
+  --white: #ffffff;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+/*font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;*/
+}
+
+html{
+	scroll-behavior: smooth;
+	
+}
+
+body{
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+}
+
+.active{
+	color: white;
+	font-weight: bold;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+background-color: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #FFF;
+}
+
+.container{
+	font-size: 2rem;
+}
+
+/*******LOGIN******/
+
+.login{
+	width: 25%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 5px solid white;
+	border-radius: 75vw;
+	font-size: 3vw;
+	text-align: center;
+	text-decoration: none;
+	
+}
+
+@media only screen and (max-width: 1200px) {
+ .login{
+  	width: 70%;
+  	font-size: 10vw;
+  }
+}
+
+.login a{
+	color: white;
+}
+
+.user{
+	
+	width: 100%;
+	border-top-right-radius: 75vw;
+	border-top-left-radius: 75vw;
+	transition-duration: 1s;
+	border-bottom: 1px solid white;
+}
+
+.admin{
+	width: 100%;
+	border-bottom-right-radius: 75vw;
+	border-bottom-left-radius: 75vw;
+	transition-duration: 1s;
+}
+
+.user:hover{
+background-color: white;
+color: green;
+}
+.user:hover a{
+color: green;
+}
+
+.admin:hover{
+background-color: white;
+}
+.admin:hover a{
+color: red;
+}
+
+
+.userNone{
+	color: blue;
+}
+.logout img{
+	transition-duration: 0.5s;
+}
+
+.logout:hover img{
+	background-color: #B8860B;
+}
+
+.pop_up2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+
+#pop_up2{
+    width: 50%;
+    height: auto;
+    border: 2px gold;
+    text-align: center;
+    padding: 1%;
+    color: white;
+    background-color: red;
+    border-radius: 10vw;
+}
+
+
+/******* ABOUT LOGIN *********/
+.loginForm_div{
+	width: 31.5%;
+	height: auto;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1.7vw;
+	background-color: #f0e68c;
+	color: black;
+	border: 20px solid white;
+	border-image: url(img/wood.jpg) 30 stretch;
+}
+
+#sendLoginUser{
+	color: #ffd700;
+	background-color: #b8860b;
+	padding: 2%;
+	transition: 0.2s;
+}
+
+#sendLoginUser:hover{
+	color: #b8860b;
+	background-color: #ffd700;
+}
+
+.loginForm{
+	margin-top: 10%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+
+.RegBtn-from-login{
+	color: #ffd700;
+	background-color: #b8860b;
+	transition: 0.2s;
+}
+
+.RegBtn-from-login:hover{
+	color: #b8860b;
+	background-color: #ffd700;
+}
+
+.RegCaption-FromLog{
+	text-align: center; 
+	font-size: 1vw; 
+	margin-top: 5%; 
+}
+
+
+/******* ABOUT REG *********/
+/*#div_Reg{
+position: absolute;
+}*/
+
+.regForm_div{
+	text-align: center;
+	width: 31.5%;
+	height: auto;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1.7vw;
+	background-color: #f0e68c;
+	color: black;
+	border: 20px solid white;
+	border-image: url(img/wood.jpg) 30 stretch;
+}
+
+.regForm{
+	margin-top: 10%;
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+#sendReg{
+	color: #ffd700;
+	background-color: #b8860b;
+	padding: 2%;
+	transition: 0.2s;
+}
+
+#sendReg:hover{
+	color: #b8860b;
+	background-color: #ffd700;
+}
+
+.LogBtn-from-reg{
+	color: #ffd700;
+	background-color: #b8860b;
+	transition: 0.2s;
+}
+
+.LogBtn-from-reg:hover{
+	color: #b8860b;
+	background-color: #ffd700;
+}
+
+.LogCaption-FromReg{
+	text-align: center; 
+	font-size: 1vw; 
+	margin-top: 5%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+ .loginForm_div{
+  	width: 100%;
+  	font-size: 6vw;
+position: absolute;
+  }
+.RegCaption-FromLog{
+	font-size: 4vw;
+}
+.regForm_div{
+  width: 100%;
+  	font-size: 6vw;
+position: absolute;
+}
+.LogCaption-FromReg{
+	font-size: 4vw;
+}
+}
+
+
+/***NAVBAR***/
+.nav_hover:hover{
+	border-bottom: 1px solid white;
+	transition: 1s;
+}
+
+/***WELCOME***/
+
+
+.welcome{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.jumbotron_ed{
+	/*background-image: url("img/bg1.jpg");*/
+	background-image: url("img/bg2.jpg");
+	/*background-color: #111111;*/
+	width: 100%;
+	height: 100vh;
+	padding: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	background-attachment: fixed;
+  	background-position: center;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+h1{
+	 font-size: 5vw;
+}
+
+
+.carousel-inner{
+transition-duration: 1s;
+margin-top: 8%;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+ .jumbotron_ed div:nth-of-type(2){
+  	display: none;
+  }
+}
+
+
+
+
+#title{
+	width: 60%;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.3);
+	height: auto;
+	border: 3px solid white;
+	/*background-color: white;*/
+	text-align: center;
+	border-radius: 10vw;
+	color: #B8860B;
+	font-family: Brush Script MT,cursive;
+	transition-duration: 1s;
+}
+
+#title:hover{
+	transition: 1s;
+	cursor: pointer;
+	text-shadow: 5px 5px 40px #B8860B;
+	border-radius: 15vw;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  h1{
+  	 font-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #title {
+  	width: 90%;
+  }
+}
+
+
+.item img{
+	border: 20px solid white;
+	border-image: url(img/wood.jpg) 30 stretch;
+	border-radius: 2vw;
+
+}
+
+.carousel-inner:hover{
+	transform: translateX(5px);
+}
+
+
+#fly_book{
+	position: absolute;
+	top: 5%;
+	animation-name: book;
+	animation-iteration-count: infinite; 
+	animation-duration: 5s;
+}
+
+#fly_book img{
+	width: 3vw;
+	height: 3vw;
+}
+
+@keyframes book{
+    0% {left: 25%;}
+       100% {left: 76%;
+       	opacity: 0.1;
+       	transform: rotate(360deg);
+      }
+}
+
+@media only screen and (max-width: 1200px) {
+  #fly_book img {
+  	width: 50px;
+    height: 50px;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #fly_book{
+    margin-top: 10%;
+  }
+}
+
+
+
+/***********BOOKS PAGE*********/
+
+.jumbotron_ed2{
+	background-image: url("img/bg2.jpg");
+	width: 100%;
+	height: auto;
+	padding: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	background-attachment: fixed;
+  	background-position: center;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+
+/*@media only screen and (max-width: 1200px) {
+  .jumbotron_ed2{
+  	height: 100vh;
+  }
+}*/
+
+
+.thumbnail{
+	height: 370px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .thumbnail{
+  	height: 340px;
+  }
+}
+
+
+.overlay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay_text {
+  color: white;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.thumbnail:hover .overlay {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+  .overlay_text{
+    font-size: 3.5vw;
+
+  }
+}
+
+
+/*@media only screen and (max-width: 1200px) {
+  .overlay{
+  	margin-top: 25%;
+  
+  }
+}*/
+
+
+
+.id{
+	opacity: 0;
+}
+
+
+.modal-content{
+	width: 100%;
+	background-color: var(--yellow);
+	border: 20px solid white;
+	border-image: url(img/wood.jpg) 30 stretch;
+}
+
+
+.pop_up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+
+#pop_up{
+    width: 50%;
+    height: auto;
+    border: 2px gold;
+    text-align: center;
+    padding: 1%;
+    color: white;
+    background-color: green;
+    border-radius: 10vw;
+}
+
+/********ORDERS**********/
+
+.orders{
+	width: 80%;
+	text-align: center;
+	border: 20px solid white;
+	background-color: #F0E68C;
+	border-image: url(img/wood.jpg) 30 stretch;
+	font-size: 1.6rem;
+	padding: 2px;
+	display: grid;
+	overflow: scroll;
+}
+
+.orders::-webkit-scrollbar {
+    width: 12px;
+}
+
+.orders::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+background-color: #222;
+}
+
+.orders::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #F0E68C;
+}
+
+.orders button{
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 0.5vw;
+	padding: 4px;
+}
+
+.orders button:hover{
+	background-color: white;
+	color: red;
+}
+
+.orders a{
+	color: inherit;
+	text-decoration:none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .jumbotron_ed2 p{
+  	font-size: 5.5vw;
+  	width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .orders{
+  	width: 100%;
+  	height: 50vh;
+  }
+}
+
+
+th{
+	border: 2px solid black;
+	text-align: center;
+}
+
+td{
+	border: 1px solid black;
+	padding: 2px;
+}
+
+.banner{
+	font-size: 3rem;
+	color: #FFD700;
+	background-color: #B8860B;
+	width: 100%;
+	border-radius: 5vw;
+	text-align: center;
+}
+
+
+
+/*********CONTACTS PAGE******/
+
+.jumbotron_ed3{
+	background-image: url("img/bg2.jpg");
+	width: 100%;
+	height: 100vh;
+	padding: 15%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	background-attachment: fixed;
+  	background-position: center;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+
+.editura{
+	width: 100%;
+	border: 20px solid white;
+	background-color: #F0E68C;
+	border-image: url(img/wood.jpg) 30 stretch;
+	/*word-spacing: 25px;*/
+	font-size: 2.8rem;
+	padding: 2px;
+	/*grid-row-start: all;*/
+	overflow: scroll;
+}
+
+.editura::-webkit-scrollbar {
+    width: 12px;
+}
+
+.editura::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+background-color: #F0E68C;
+}
+
+.editura::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #FFF;
+}
+
+.editura th{
+	white-space:nowrap;
+	border: none;
+	padding: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .editura{
+  	width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .jumbotron_ed3 p{
+  	font-size: 5.5vw;
+  	width: 100%;
+  }
+}
+
+
+.mediaDiv{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+	color: white; 
+	font-size: 1.8rem;
+	margin-top: 5%;
+	
+}
+
+.mediaDiv div{
+	transition-duration: 0.5s;
+	transition: 0.5s ease;
+}
+
+.mediaDiv div:hover{
+	cursor: pointer;
+	box-shadow: 0 0 20px gold;
+}
+
+.mediaDiv img{
+	width: 75px;
+	height: 75px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .mediaDiv{
+  	flex-direction: row;
+  	justify-content: space-between;
+  	margin-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mediaDiv span{
+  	display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner{
+  	margin-top: 5%;
+  }
+}
+
+
+/*******VALIDATION****/
+
+
+label.error {
+	position: absolute;
+    color: red;
+    font-size: 1.5rem;
+    display: block;
+}
+
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+@media only screen and (max-width: 1200px) {
+  label.error{
+  	display: block;
+  }
+}
+
+
+/**********SHOPPING-CART***************/
+
+.shopping-cart{
+	cursor: pointer;
+}
+
+.shopping-cart img{
+	transition-duration: 0.5s;
+}
+
+.shopping-cart:hover img{
+background-color: #B8860B;
+
+}
+
+.shoppingCartTable{
+	width: 100%;
+	font-size: 2rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .shoppingCartTable{
+  	font-size: 1.5rem;
+  }
+}
+
+.shoppingCartTable button{
+	background-color: red;
+	color: white;
+	border: none;
+	border-radius: 0.5vw;
+	padding: 4px;
+}
+
+.shoppingCartTable button:hover{
+	background-color: white;
+	color: red;
+}
+
+.shoppingCartTable a{
+	color: inherit;
+	text-decoration:none;
+}
+
+.buyBtn{
+	background-color: green;
+	color: white;
+}
+.buyBtn:hover{
+	background-color: white;
+	color: green;
+}
+
+.totalPriceCart{
+	font-size: 2.5rem;
+	display: flex;
+	justify-content: flex-start; 
+}
+
+
+/**************FILTER***************/
+
+.filter{
+	position: sticky;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	padding: 1.3%;
+	width: 85%;
+	height: auto;
+	background-color: #222222;
+	color: white;
+	font-size: 2.2rem;
+	align-content: center; 
+	transition: top 300ms ease-in-out 300ms;
+	border: 20px solid white;
+	border-image: url(img/wood.jpg) 30 stretch;
+	border-radius: 2vw;
+}
+
+.filter input{
+	transform: scale(1.5);
+        /*margin: 26px;*/
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .filter{
+  	display: none;
+  	flex-direction: column;
+  	text-align: left;
+  	padding: 1%;
+  	width: 75%;
+  	font-size: 1.5rem;
+  }
+}
+
+#filter_mobile{
+	display: none;
+	background-color: #222222;
+	color: white;
+	padding: 2%;
+	border-radius: 20%;
+}
+#filter_mobile:hover{
+	background-color: white;
+	color: #222222;
+}
+
+@media only screen and (max-width: 1200px) {
+  #filter_mobile{
+  	display: block;
+transition: top 500ms ease-in-out 0ms;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 5%;
+  width: 60%;
+  z-index: 1000;
+}
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background-color: #222222;
+	color: silver;
+	font-size: 1.8rem;
+	padding: 0.3%;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	position: fixed;
+}
+
+.footer div{
+	position: relative;
+	cursor: pointer;
+	/*animation-name: footer;
+	animation-iteration-count: infinite; 
+	animation-duration: 10s;*/
+}
+
+.footer div:hover{
+	color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+ .footer{
+  	flex-direction: column;
+  	font-size: 1rem;
+  }
+}
+
+/*@keyframes footer{
+0% {left: 0%;}
+100%{left: -101%;}
+}*/
