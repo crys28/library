@@ -1,8 +1,8 @@
 <?php
 
-$dbServername = "localhost:3307";
-$dbUsername = "crys28";
-$dbPassword = "280220";
+$dbServername = "localhost";
+$dbUsername = "username";
+$dbPassword = "password";
 $dbName = "library";
 
 
